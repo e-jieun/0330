@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* universal 선택자 */
+    * {
+      margin: 0;
+      padding: 0;
+      /* 원래 content-box(content-box가 기준) 기본값인데 border기준으로 바꾸겠다는 뜻 */
+      /* border-box: border값을 포함하는 너비 박스 */
+      /* float을 쓰는 경우에 많이 사용했다 */
+      box-sizing: border-box;
+    }
+
+    /* 왜 스크롤이 생길까
+      스크롤도 픽셀 값이 정해져있음
+      인터페이스는 바꿀 수 없어도, 스크롤은 바꿀 수 있음(스타일링 가능) */
+    /* 스크롤이 생기는 이유
+      브라우저도 누군가 마크업을 한 것이기 때문에 */
+    #root {
+      width: 1920px;
+      height: 1080px;
+      background-color: #ccc;
+    }
+
+    #root>div {
+      width: 960px;
+      height: 540px;
+      border: 1px solid black;
+      display: inline-block;
+      
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      /* -> 정가운데 오지 않음 오프셋이 이 위치에 오기 때문 */
+      /* 변형할래 */
+      /*  */
+      transform: translate(-50%, -50%);
+    }
+    #root>section{
+      width: 500px;
+      height: 500px;
+      background-color: salmon;
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      /* -> 정가운데 오지 않음 오프셋이 이 위치에 오기 때문 */
+      /* 변형할래 */
+      transform: translate(-50%, -50%);
+      /* 코드만 볼 땐 직관적이지만 코드가 많아지면 복잡해짐 */
+
+      /* 공톧적인 옛날 디자인 방식
+      1. 지원되는 기능이 별로 없어서 억지로 원래 용도를 다른 용도로 바꿔서 씀
+      => float, flex를 안쓰는 방식
+      2. 부모의 특징을 고려하지 않는 방식 -> item에 직접 지정
+      => 코드가 많이 늘어나고, 틀릴 확률 높아짐
+
+      !컨테이너 보이지 않아도 레이아웃용으로 태그를 만드는 것이 덜 어렵고 더 간단함 => 코드를 덜 써도 됨, 야근 X */
+
+      /* flex, inline-flex(사이즈를 인라인 방식으로 한다는 특징만 있음)
+      1. 그동안에 힘들었던 것들을 다 취합해서 구조화한 것
+      -> 구도를 잡는 관련의 속성은 !모두 지원!
+
+      !display => 구도를 잡는 것
+      !position => 자바 스크립트로 제어할 때만 사용하자 */
+      /* layout이 조급해질 때
+      1. position을 섣불리 쓰지 않고 -> display 지원 속성 사용하는 것이 매우 현명한 선택
+      = froging
+      !2. 구도: 이쪽에 놓고싶음, 이거 다음에 밑에 깔고싶음
+      지정: 좌표 어디에 어떻게 이동시킬래 */
+      
+    }
+    
+
+
+    /* 브라우저의 기본 박스모델 사이즈 규칙
+    content + border + margin = width
+    content 기준이 아니라 border까지 포함하게끔 기본 설정을 바꾸기
+  */
+  </style>
+</head>
+
+<body>
+  <div id="root">
+    <div></div>
+    <section></section>
+  </div>
+</body>
+
+</html>

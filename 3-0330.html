@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* universal 선택자 */
+    * {
+      margin: 0;
+      padding: 0;
+      /* 원래 content-box(content-box가 기준) 기본값인데 border기준으로 바꾸겠다는 뜻 */
+      /* border-box: border값을 포함하는 너비 박스 */
+      /* float을 쓰는 경우에 많이 사용했다 */
+      box-sizing: border-box;
+    }
+
+    /* 왜 스크롤이 생길까
+      스크롤도 픽셀 값이 정해져있음
+      인터페이스는 바꿀 수 없어도, 스크롤은 바꿀 수 있음(스타일링 가능) */
+    /* 스크롤이 생기는 이유
+      브라우저도 누군가 마크업을 한 것이기 때문에 */
+    #root {
+      width: 1920px;
+      height: 1080px;
+      background-color: #ccc;
+    }
+
+    #root>div {
+      width: 960px;
+      height: 540px;
+      border: 1px solid black;
+      display: inline-block;
+    }
+
+    /* 브라우저의 기본 박스모델 사이즈 규칙
+    content + border + margin = width
+    content 기준이 아니라 border까지 포함하게끔 기본 설정을 바꾸기
+  */
+  </style>
+</head>
+
+<body>
+  <div id="root">
+    <div></div>
+    <div></div>
+  </div>
+</body>
+
+</html>
