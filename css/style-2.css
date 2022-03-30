@@ -1,0 +1,46 @@
+/* work1 */
+.root{
+  width: 100vw;
+  height: 200vh;
+}
+.container{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+.container > div{
+  width: 25vw;
+  height: 100vh;
+  background-color: palegreen;
+  transition: 2s;
+}
+.container > div:nth-child(1){
+  background-color: paleturquoise;
+}
+#selector{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#selector > h2{
+  font-weight: 400;
+}
+/* work2 */
+@media(min-width:1080px){
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+  .container > div{
+    width: 100vw;
+    height: 25vh;
+  }
+
+  /* work3 */
+  #selector > h2:hover{
+    color: palegreen;
+  }
+}
+

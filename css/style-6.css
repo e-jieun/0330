@@ -1,0 +1,130 @@
+/* style */
+/* mobile */
+.root{
+  width: 100vw;
+  height: 100vh;
+}
+/* header */
+header{
+  width: inherit;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+/* 최상단 광고 con */
+header>div>div:nth-child(1){
+  width: inherit;
+  height: 5vh;
+  /* border: 1px solid red; */
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+}
+header>div>div:nth-child(1)>div{
+  color: var(--color-fff);
+}
+/* logo, customer con */
+header>div>div:nth-child(2){
+  width: inherit;
+  height: 5vh;
+  /* border: 1px solid red; */
+  background-color: var(--color-c4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* logo */
+/* customer */
+header>div>div:nth-child(2)>div{
+  width: 100px;
+  height: 30px;
+  background-color: gray;
+}
+
+/* main */
+main>div>div{
+  width: 100vw;
+  height: 100vw;
+  border: 1px solid black;  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+main>div:nth-child(1)>div:nth-child(1)>div:nth-child(3){
+  display: flex;
+}
+main>div:nth-child(1)>div:nth-child(1)>div:nth-child(3)>div:nth-child(1){
+  width: 70vw;
+  height: 10vw;
+}
+main>div:nth-child(1)>div:nth-child(1)>div:nth-child(3)>div:nth-child(2){
+  width: 30vw;
+  height: 10vw;
+}
+
+/* footer */
+footer{
+  width: inherit;
+  height: 20vh;
+  overflow: hidden;
+}
+footer>div{
+  background-color: var(--color-bk);
+  color: var(--color-c4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer>div:nth-child(1){
+  height: 5vh;
+}
+footer>div:nth-child(2){
+  height: 10vh;
+  justify-content: flex-start;
+}
+footer>div:nth-child(3){
+  height: 5vh;
+}
+
+@media(min-width:500px){
+  #root{
+    width: 100vw;
+    height: 100vh;
+  } 
+  /* header */
+  header{
+    width: inherit;
+    height: 25vh;
+  }
+  header>div>div{
+    width: inherit;
+    height: 5vh;
+  }
+  /* category con */
+  header>div>div:nth-child(3)>div ul{
+    display: flex;
+    list-style-type: none;
+    column-gap: 2vw;
+  }
+  /* menu con */
+  header>div>div:nth-child(4)>div ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;    
+  }
+  /* main */
+  main>div{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  /* ?main부분에서 3칸을 flex-wrap으로 묶어주는 방식이 아니라 column 3줄의 컨텐츠를 만들어 준 다음 flex로 해줘야 할 것 같음 */
+  main>div>div{
+    width: 28vw;
+    height: 50vw;
+  }
+  main>div>div:nth-child(1),:nth-child(4){
+    width: 40vw;
+  }
+
+}
