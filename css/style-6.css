@@ -79,6 +79,7 @@ footer>div{
 footer>div:nth-child(1){
   height: 5vh;
 }
+/* 아직 pc버전의 미디어 쿼리에서 쓰지 않았지만 pc버전 미디어 쿼리에서 flex-start임에도 불구하고 space-between처럼 변하는 부분 고치기 */
 footer>div:nth-child(2){
   height: 10vh;
   justify-content: flex-start;
@@ -108,6 +109,7 @@ footer>div:nth-child(3){
     column-gap: 2vw;
   }
   /* menu con */
+  /* 아직 pc버전의 미디어 쿼리에서 쓰지 않았지만 pc버전 미디어 쿼리에서 flex-start임에도 불구하고 space-between처럼 변하는 부분 고치기 */
   header>div>div:nth-child(4)>div ul{
     display: flex;
     list-style-type: none;
