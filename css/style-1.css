@@ -28,6 +28,7 @@
   justify-content: center;
 }
 #selector > h2{
+  /* 글씨가 안 보이게한 부분 */
   color: greenyellow;
   font-weight: 400;
 }
@@ -44,6 +45,7 @@
   }
 
   /* work3 */
+  /* hover 적용한 selector의 h2 */
   #selector > h2:hover{
     color: #333;
   }
